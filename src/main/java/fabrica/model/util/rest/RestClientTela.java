@@ -1,4 +1,4 @@
-package fabrica.model.util.rest;
+        package fabrica.model.util.rest;
 
 import fabrica.domain.Tela;
 import fabrica.domain.TelaTblModel;
@@ -40,7 +40,7 @@ public class RestClientTela {
             //url del RestWebService a usar
             webTarget = cliente.target(URL_BASE).path("/tela/all");
 
-            List<Tela> all = webTarget.request(MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON)
+            List<Tela> all = webTarget.request(MediaType.APPLICATION_XML)
                     .get(Response.class).readEntity(new GenericType<List<Tela>>() {
             });
             for (Tela tela : all) {
@@ -154,7 +154,7 @@ public class RestClientTela {
         return telaRecuperada;
     }
 
-    public static Response ModificarTela(Tela tela, String id) throws RuntimeException {
+    public static Response ModificarTela(Tela tela, int id) throws RuntimeException {
         try {
             HttpAuthenticationFeature feature = HttpAuthenticationFeature.basicBuilder()
                     .nonPreemptive()
@@ -178,7 +178,7 @@ public class RestClientTela {
         }
     }
 
-    public static Response eliminarTelaPorId(Tela tela,String id){
+    public static Response eliminarTelaPorId(String id){
         try {
             HttpAuthenticationFeature feature = HttpAuthenticationFeature.basicBuilder()
                     .nonPreemptive()

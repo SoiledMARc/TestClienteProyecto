@@ -5,4 +5,5 @@ fabrica\model\util\rest\RestClientTela.class
 fabrica\domain\TelaTblModel.class
 fabrica\model\util\rest\RestClientTela$1.class
 fabrica\Main.class
+fabrica\model\util\DialogUtil.class
 fabrica\controller\PruebaTableController.class

@@ -8,7 +8,7 @@ public class Tela implements Serializable{
     private static final long serialVersionUID =  1447199063826949783L;
     private Integer idTela;
     private String tipoTela;
-    private String nombreTela;
+    private String nombre;
     private String colorTela;
     private Integer metros;
     private Integer costo;
@@ -19,7 +19,7 @@ public class Tela implements Serializable{
     public Tela(Integer idTela, String tipoTela, String nombreTela, String colorTela, Integer metros, Integer costo) {
         this.idTela = idTela;
         this.tipoTela = tipoTela;
-        this.nombreTela = nombreTela;
+        this.nombre = nombreTela;
         this.colorTela = colorTela;
         this.metros = metros;
         this.costo = costo;
@@ -42,11 +42,11 @@ public class Tela implements Serializable{
     }
 
     public String getNombreTela() {
-        return nombreTela;
+        return nombre;
     }
 
     public void setNombreTela(String nombreTela) {
-        this.nombreTela = nombreTela;
+        this.nombre = nombreTela;
     }
 
     public String getColorTela() {
@@ -75,7 +75,7 @@ public class Tela implements Serializable{
 
     @Override
     public String toString() {
-        return "Tela{" + "idTela=" + idTela + ", tipoTela=" + tipoTela + ", nombreTela=" + nombreTela + ", colorTela=" + colorTela + ", metros=" + metros + ", costo=" + costo + '}';
+        return "Tela: " + "ID: " + idTela + "\n Tipo: " + tipoTela + "\n Nombre: " + nombre + "\n Color: " + colorTela + "\n Metros: " + metros + "\n Costo: " + costo;
     }
     
     
